@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: n8n-kakao-gemini
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: N8N_HOST
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
